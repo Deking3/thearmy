@@ -59,11 +59,30 @@ h2 {
 }
 
 .gallery-images {
-    display: flex;
+   
     justify-content: center;
-    gap: 20px;
+ 
 }
+@media (max-width: 768px) {
+    .gallery-images {
+        display: block;
 
+}
+.gallery-images img {
+    display: block; /* Forces images to take a block layout */
+    margin-bottom: 20px; /* Adds vertical gap */
+}
+.gallery-images img:last-child {
+    margin-bottom: 0;}
+  }
+  
+  @media (min-width: 769px) {
+    .gallery-images {
+        display: flex;
+        gap: 20px;
+    }
+  }
+  
 .gallery-images img {
     width: 200px;
     height: 150px;
@@ -111,7 +130,24 @@ form button:hover {
 .fade-in {
     animation: fadeIn 1.5s ease;
 }
+.contact{
+    justify-items: center;
+}
 
 .slide-in {
     animation: slideIn 1s ease;
+    justify-content: center;
 }
+
+@media (max-width: 768px) {
+    .drama1 {
+      max-width: 100%; /* Images stack on smaller screens */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .drama1 {
+      width: 70%; /* Adjust image sizes for larger screens */
+    }
+  }
+  
